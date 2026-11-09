@@ -1,0 +1,2559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <title>ICSCAI 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              secondary: "#2e6097",
+              "primary-fixed": "#dae1ff",
+              "surface-container-low": "#f6f3f2",
+              surface: "#fcf9f8",
+              "on-tertiary-container": "#ff9b92",
+              "on-error": "#ffffff",
+              tertiary: "#690008",
+              "surface-container-high": "#eae7e7",
+              "on-background": "#1b1c1c",
+              "on-secondary-fixed-variant": "#0a487e",
+              "on-primary-fixed-variant": "#284385",
+              "outline-variant": "#c4c6d2",
+              "on-primary-fixed": "#001849",
+              "on-primary": "#ffffff",
+              "primary-container": "#294486",
+              "surface-container-highest": "#e5e2e1",
+              "on-primary-container": "#9bb4fe",
+              "surface-container": "#f0eded",
+              "secondary-container": "#93c1fe",
+              "surface-bright": "#fcf9f8",
+              "secondary-fixed": "#d3e4ff",
+              "on-tertiary-fixed": "#410003",
+              error: "#ba1a1a",
+              "on-surface": "#1b1c1c",
+              "on-tertiary-fixed-variant": "#93000f",
+              "surface-variant": "#e5e2e1",
+              outline: "#757681",
+              "tertiary-fixed": "#ffdad6",
+              "inverse-surface": "#303030",
+              "on-secondary-fixed": "#001c38",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#b3c5ff",
+              "surface-dim": "#dcd9d9",
+              primary: "#0b2d6e",
+              "secondary-fixed-dim": "#a2c9ff",
+              "tertiary-fixed-dim": "#ffb3ac",
+              "surface-tint": "#425c9f",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#940010",
+              "inverse-on-surface": "#f3f0ef",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#b3c5ff",
+              "on-surface-variant": "#444650",
+              "on-error-container": "#93000a",
+              background: "#fcf9f8",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#164f85",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              margin: "3rem",
+              "space-sm": "0.5rem",
+              "space-xl": "2.5rem",
+              "space-2xl": "4rem",
+              "space-md": "1rem",
+              "space-xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "gutter-mobile": "1rem",
+              gutter: "1.5rem",
+              "margin-mobile": "1.25rem",
+            },
+            fontFamily: {
+              "label-md": ["Hanken Grotesk"],
+              "label-lg": ["Hanken Grotesk"],
+              "body-lg": ["Hanken Grotesk"],
+              "body-md": ["Hanken Grotesk"],
+              "body-sm": ["Hanken Grotesk"],
+              "title-md": ["Hanken Grotesk"],
+              "label-mono": ["Hanken Grotesk"],
+              "display-hero-mobile": ["Hanken Grotesk"],
+              "headline-lg-mobile": ["Hanken Grotesk"],
+              "headline-lg": ["Hanken Grotesk"],
+              "headline-sm": ["Hanken Grotesk"],
+              "display-hero": ["Hanken Grotesk"],
+              "headline-md": ["Hanken Grotesk"],
+            },
+            fontSize: {
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-lg": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "body-md": [
+                "15px",
+                { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "title-md": [
+                "18px",
+                { lineHeight: "24px", letterSpacing: "0em", fontWeight: "600" },
+              ],
+              "label-mono": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.08em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero-mobile": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg-mobile": [
+                "26px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "20px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-hero": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"
+  >
+    <header
+      class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div class="h-16 px-gutter-mobile flex items-center justify-between">
+        <div class="flex items-center gap-space-xs">
+          <button
+            aria-label="Open Menu"
+            class="w-11 h-11 flex items-center justify-center text-primary active:scale-95 transition-transform"
+            id="menu-toggle-btn"
+          >
+            <span class="material-symbols-outlined text-[24px]"> menu </span>
+          </button>
+          <img
+            alt="logo3.png"
+            class="h-8 w-auto object-contain"
+            src="logo3.png"
+          />
+          <div class="flex flex-col ml-space-xs">
+            <span
+              class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight leading-none"
+            >
+              ICSCAI 2026
+            </span>
+            <span
+              class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider"
+            >
+              RIT Roorkee
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs">
+          <!-- <a
+            class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-secondary transition-colors"
+            href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Paper%20Submission"
+          >
+            Submit Paper
+          </a> -->
+          <!-- <button
+            aria-label="Author & Attendee Registration"
+            id="header-register-btn"
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm hover:bg-secondary transition-colors text-on-primary cursor-pointer"
+            title="Register Now"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]">
+              person
+            </span> -->
+          </button>
+        </div>
+      </div>
+      <div
+        class="px-gutter-mobile pb-space-xs flex items-center justify-between"
+      >
+        <span
+          class="font-title-md text-title-md text-on-surface"
+          id="current-section-title"
+        >
+        
+        </span>
+        <a
+          class="sm:hidden inline-flex items-center gap-space-xs px-space-sm py-1 bg-primary text-on-primary font-label-md text-label-md rounded shadow-sm hover:bg-secondary transition-colors"
+          href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Paper%20Submission"
+        >
+          <span class="material-symbols-outlined text-[14px]">
+            upload_file
+          </span>
+          Submit Paper
+        </a>
+      </div>
+    </header>
+    <div
+      class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0 bg-inverse-surface/40 backdrop-blur-sm"
+      id="academic-drawer"
+      aria-hidden="true"
+    >
+      <div
+        class="w-4/5 max-w-xs h-full bg-surface-container-lowest p-space-lg flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto shadow-2xl overflow-y-auto"
+        id="academic-drawer-panel"
+      >
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between pb-space-md">
+            <div class="flex items-center gap-space-xs">
+              <img
+                alt="logo3.png"
+                class="h-7 w-auto object-contain"
+                src="logo3.png"
+              />
+              <span
+                class="font-headline-sm text-headline-sm font-bold text-primary"
+              >
+                ICSCAI 2026
+              </span>
+            </div>
+            <button
+              class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"
+              id="menu-close-btn"
+              aria-label="Close menu"
+            >
+              <span class="material-symbols-outlined"> close </span>
+            </button>
+          </div>
+          <nav class="flex flex-col gap-1 mt-space-sm" id="sidebar-nav">
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="home"
+              href="#home"
+            >
+              <span class="material-symbols-outlined text-primary"> home </span>
+              Home
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="about"
+              href="#about"
+            >
+              <span class="material-symbols-outlined text-secondary">
+                info
+              </span>
+              About ICSCAI
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="important-dates"
+              href="#important-dates"
+            >
+              <span class="material-symbols-outlined text-tertiary">
+                calendar_month
+              </span>
+              Important Dates
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="tracks-&amp;-call-for-papers"
+              href="#tracks"
+            >
+              <span class="material-symbols-outlined text-primary">
+                category
+              </span>
+              Call for Papers / Tracks
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="conference-schedule"
+              href="#schedule"
+            >
+              <span class="material-symbols-outlined text-secondary">
+                schedule
+              </span>
+              Schedule Matrix
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="registration"
+              href="#registration"
+            >
+              <span class="material-symbols-outlined text-primary">
+                receipt_long
+              </span>
+              Registration
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="organizing-committee"
+              href="#committees"
+            >
+              <span class="material-symbols-outlined text-secondary">
+                groups
+              </span>
+              Committees
+            </a>
+            <a
+              class="drawer-nav-item flex items-center gap-space-md px-space-sm py-space-sm rounded text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors"
+              data-path="contact"
+              href="#contact"
+            >
+              <span class="material-symbols-outlined text-on-surface-variant">
+                mail
+              </span>
+              Contact Secretariat
+            </a>
+          </nav>
+        </div>
+        <div class="pt-space-md flex flex-col gap-space-sm">
+          <a
+            class="w-full flex items-center justify-center gap-space-xs py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded shadow-sm hover:bg-secondary transition-colors"
+            href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Paper%20Submission"
+            id="drawer-submit-paper-btn"
+          >
+            <span class="material-symbols-outlined text-[18px]"> send </span>
+            Submit Paper
+          </a>
+          <a
+            class="w-full flex items-center justify-center gap-space-xs py-space-sm bg-surface-container text-primary font-label-lg text-label-lg rounded shadow-sm hover:bg-surface-container-high transition-colors"
+            href="assets/ICSCAI_2026_Brochure.pdf"
+            download="ICSCAI_2026_Brochure.pdf"
+            id="drawer-download-brochure-btn"
+          >
+            <span class="material-symbols-outlined text-[18px]">
+              download
+            </span>
+            Download Brochure
+          </a>
+          <div class="flex flex-col gap-0.5 text-center pt-1">
+            <span class="font-label-mono text-label-mono text-outline">
+              Technical Partner
+            </span>
+            <span
+              class="font-label-md text-label-md text-on-surface font-semibold"
+            >
+              AIT Thailand
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="flex flex-col relative w-full pt-16 pb-28 bg-surface">
+      <div class="flex flex-col w-full">
+        <!-- Top Accreditation Ribbon -->
+        <div
+          class="w-full bg-primary-container text-on-primary py-2 px-gutter-mobile flex flex-wrap items-center justify-between gap-2 shadow-sm"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="inline-flex items-center justify-center bg-tertiary-container text-on-tertiary text-label-mono font-label-mono px-2 py-0.5 rounded"
+            >
+              RIT ROORKEE
+            </span>
+            <span
+              class="text-label-mono font-label-mono font-bold tracking-wider text-secondary-fixed"
+            >
+              NAAC A++ ACCREDITED
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-1.5 text-label-mono font-label-mono text-primary-fixed-dim"
+          >
+            <span
+              class="material-symbols-outlined text-[15px] text-tertiary-fixed"
+            >
+              verified
+            </span>
+            <span> Top 4% Engineering Institutions in India </span>
+          </div>
+        </div>
+        <!-- Hero Section -->
+        <section
+          id="home"
+          class="w-full bg-primary-container text-on-primary px-gutter-mobile py-space-xl relative overflow-hidden"
+        >
+          <div
+            class="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10 gap-space-md"
+          >
+            <!-- Mode Badge -->
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface/10 rounded-full backdrop-blur-md"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"
+              >
+              </span>
+              <span
+                class="text-label-md font-label-md text-primary-fixed tracking-wide uppercase"
+              >
+                International Conference • Dec 08, 2026 • Hybrid
+              </span>
+            </div>
+            <!-- Main Title & Acronym -->
+            <div class="flex flex-col gap-1">
+              <h1
+                class="font-display-hero-mobile text-display-hero-mobile font-extrabold tracking-tight text-on-primary"
+              >
+                ICSCAI 2026
+              </h1>
+              <p
+                class="font-headline-sm text-headline-sm text-secondary-fixed font-semibold"
+              >
+                International Conference on Smart Computing &amp; Artificial
+                Intelligence
+              </p>
+            </div>
+            <!-- Institutional Partnership Strip -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-3 bg-on-primary/10 rounded-xl p-3 w-full max-w-2xl"
+            >
+              <div class="flex flex-col text-center sm:text-left">
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary-fixed"
+                >
+                  Host Institution
+                </span>
+                <span
+                  class="text-body-sm font-body-sm font-semibold text-on-primary"
+                >
+                  Roorkee Institute of Technology (RIT Roorkee), Uttarakhand,
+                  India
+                </span>
+              </div>
+              <div class="hidden sm:block w-px h-8 bg-on-primary/20"></div>
+              <div class="flex flex-col text-center sm:text-left">
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary-fixed"
+                >
+                  Technical Collaboration
+                </span>
+                <span
+                  class="text-body-sm font-body-sm font-semibold text-on-primary"
+                >
+                  Asian Institute of Technology (AIT), Thailand
+                </span>
+              </div>
+            </div>
+            <!-- Countdown Widget -->
+            <div class="w-full max-w-md pt-2">
+              <span
+                class="text-label-mono font-label-mono uppercase tracking-widest text-secondary-fixed mb-2 block"
+              >
+                Countdown to Keynote Inauguration
+              </span>
+              <div
+                class="grid grid-cols-4 gap-2 text-center"
+                id="countdown-timer"
+              >
+                <div
+                  class="bg-surface/15 rounded-lg p-2 flex flex-col items-center"
+                >
+                  <span
+                    class="font-headline-md text-headline-md font-bold text-on-primary"
+                    id="cd-days"
+                  >
+                    --
+                  </span>
+                  <span
+                    class="text-label-mono font-label-mono text-primary-fixed uppercase"
+                  >
+                    Days
+                  </span>
+                </div>
+                <div
+                  class="bg-surface/15 rounded-lg p-2 flex flex-col items-center"
+                >
+                  <span
+                    class="font-headline-md text-headline-md font-bold text-on-primary"
+                    id="cd-hours"
+                  >
+                    --
+                  </span>
+                  <span
+                    class="text-label-mono font-label-mono text-primary-fixed uppercase"
+                  >
+                    Hours
+                  </span>
+                </div>
+                <div
+                  class="bg-surface/15 rounded-lg p-2 flex flex-col items-center"
+                >
+                  <span
+                    class="font-headline-md text-headline-md font-bold text-on-primary"
+                    id="cd-minutes"
+                  >
+                    --
+                  </span>
+                  <span
+                    class="text-label-mono font-label-mono text-primary-fixed uppercase"
+                  >
+                    Mins
+                  </span>
+                </div>
+                <div
+                  class="bg-surface/15 rounded-lg p-2 flex flex-col items-center"
+                >
+                  <span
+                    class="font-headline-md text-headline-md font-bold text-tertiary-fixed"
+                    id="cd-seconds"
+                  >
+                    --
+                  </span>
+                  <span
+                    class="text-label-mono font-label-mono text-primary-fixed uppercase"
+                  >
+                    Secs
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Hero Call To Actions -->
+            <div
+              class="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md pt-2"
+            >
+              <a
+                class="w-full sm:flex-1 py-3 px-4 bg-tertiary-container text-on-tertiary font-label-lg text-label-lg rounded shadow-md hover:bg-tertiary transition-transform active:scale-98 flex items-center justify-center gap-2"
+                href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Paper%20Submission"
+              >
+                <span class="material-symbols-outlined text-[18px]">
+                  cloud_upload
+                </span>
+                <span> Submit Paper </span>
+              </a>
+              <a
+                class="w-full sm:flex-1 py-3 px-4 bg-surface text-primary font-label-lg text-label-lg rounded shadow-sm hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2"
+                href="#tracks"
+              >
+                <span class="material-symbols-outlined text-[18px]">
+                  explore
+                </span>
+                <span> Explore Tracks </span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- About Section -->
+        <section
+          id="about"
+          class="w-full px-gutter-mobile py-space-xl bg-surface"
+        >
+          <div class="max-w-4xl mx-auto flex flex-col gap-space-lg">
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-label-mono font-label-mono uppercase text-secondary font-bold tracking-widest"
+              >
+                About The Symposium
+              </span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+              >
+                Advancing Frontiers of Intelligent Computing
+              </h2>
+            </div>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+            >
+              ICSCAI 2026 aims to bring together leading academic scientists,
+              researchers, and industry practitioners to exchange and share
+              their experiences and research results on all aspects of Smart
+              Computing and Artificial Intelligence. In collaboration with our
+              Technical Partner, AIT Thailand, the conference will provide a
+              premier interdisciplinary platform to present and discuss the most
+              recent innovations, trends, practical challenges encountered, and
+              solutions adopted in the fields of CSE and AIML.
+            </p>
+            <!-- Action Buttons: Download Brochure & Learn More -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-on-primary font-label-md text-label-md rounded shadow-sm hover:bg-secondary transition-colors"
+                href="assets/ICSCAI_2026_Brochure.pdf"
+                download="ICSCAI_2026_Brochure.pdf"
+                id="about-brochure-btn"
+              >
+                <span class="material-symbols-outlined text-[18px]">
+                  download
+                </span>
+                <span>Download Brochure</span>
+              </a>
+              <button
+                type="button"
+                id="learn-more-btn"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container text-primary font-label-md text-label-md rounded shadow-sm hover:bg-surface-container-high transition-colors cursor-pointer"
+                aria-expanded="false"
+                aria-controls="learn-more-content"
+              >
+                <span
+                  class="material-symbols-outlined text-[18px]"
+                  id="learn-more-icon"
+                >
+                  expand_more
+                </span>
+                <span id="learn-more-text">Learn More</span>
+              </button>
+            </div>
+            <!-- Expandable Learn More Content -->
+            <div
+              id="learn-more-content"
+              class="hidden bg-surface-container-lowest p-space-md rounded-xl border border-outline/10 flex flex-col gap-2 shadow-sm transition-all"
+            >
+              <h3 class="font-title-md text-title-md text-primary font-bold">
+                Roorkee Institute of Technology &amp; Technical Collaboration
+              </h3>
+              <p
+                class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+              >
+                Roorkee Institute of Technology (RIT Roorkee), accredited with
+                prestigious NAAC A++ grade, stands among the top 4% of
+                engineering institutions across India. Located in the academic
+                heart of Uttarakhand, RIT is committed to nurturing advanced
+                research in computer science, robotics, and applied artificial
+                intelligence. In collaborative alliance with Asian Institute of
+                Technology (AIT), Bangkok, Thailand, ICSCAI 2026 bridges the
+                global academic community with high-rigor peer evaluations,
+                international keynote addresses, and indexed open-access
+                archival.
+              </p>
+              <div
+                class="flex flex-wrap gap-2 pt-1 text-label-mono font-label-mono text-secondary font-semibold"
+              >
+                <span
+                  class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed rounded"
+                  >NAAC A++ Grade</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed rounded"
+                  >Technical Partner: AIT Thailand</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded"
+                  >Indexed in Google Scholar</span
+                >
+              </div>
+            </div>
+            <!-- Highlights Quad-Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-2">
+              <div
+                class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[22px]">
+                    verified_user
+                  </span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <h3
+                    class="font-title-md text-title-md text-primary font-semibold"
+                  >
+                    Peer-Reviewed Rigor
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Stringent academic review guidelines supervised by leading
+                    international faculty.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[22px]">
+                    public
+                  </span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <h3
+                    class="font-title-md text-title-md text-primary font-semibold"
+                  >
+                    Global Keynotes
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Four distinct plenary sessions presented by renowned
+                    scholars from India and Thailand.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[22px]">
+                    auto_stories
+                  </span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <h3
+                    class="font-title-md text-title-md text-primary font-semibold"
+                  >
+                    Google Scholar Indexing
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Archived open-access dissemination via the recognized
+                    journal partner IJHSIMS.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3 shadow-sm"
+              >
+                <div
+                  class="w-10 h-10 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[22px]">
+                    cast_for_education
+                  </span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <h3
+                    class="font-title-md text-title-md text-primary font-semibold"
+                  >
+                    Hybrid Participation
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Seamless in-person Roorkee sessions and interactive virtual
+                    presentation streams.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Important Dates Timeline -->
+        <section
+          id="important-dates"
+          class="w-full px-gutter-mobile py-space-xl bg-surface-container-low"
+        >
+          <div class="max-w-4xl mx-auto flex flex-col gap-space-lg">
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-label-mono font-label-mono uppercase text-tertiary-container font-bold tracking-widest"
+              >
+                Procedural Deadlines
+              </span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+              >
+                Important Dates
+              </h2>
+            </div>
+            <div class="flex flex-col gap-3">
+              <!-- Date Item 1 -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      campaign
+                    </span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-title-md text-title-md text-on-surface">
+                      CFP Official Release
+                    </span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Call for Papers publicly dispatched
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="font-label-lg text-label-lg text-primary bg-primary-fixed px-3 py-1 rounded text-right whitespace-nowrap"
+                >
+                  Nov 09, 2026
+                </span>
+              </div>
+              <!-- Date Item 2 - Highlighted -->
+              <div
+                class="bg-tertiary-container text-on-tertiary p-space-md rounded-xl flex items-center justify-between shadow-md"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class="w-8 h-8 rounded-full bg-on-tertiary text-tertiary-container flex items-center justify-center shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      priority_high
+                    </span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-title-md text-title-md font-bold">
+                      Paper Submission Deadline
+                    </span>
+                    <span class="font-body-sm text-body-sm text-tertiary-fixed">
+                      Final deadline for complete drafts
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="font-label-lg text-label-lg bg-on-tertiary text-tertiary-container font-bold px-3 py-1 rounded text-right whitespace-nowrap"
+                >
+                  Nov 25, 2026
+                </span>
+              </div>
+              <!-- Date Item 3 -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      mark_email_read
+                    </span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-title-md text-title-md text-on-surface">
+                      Acceptance Notification
+                    </span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Peer review results emailed to authors
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="font-label-lg text-label-lg text-secondary bg-secondary-fixed px-3 py-1 rounded text-right whitespace-nowrap"
+                >
+                  Nov 30, 2026
+                </span>
+              </div>
+              <!-- Date Item 4 -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      task
+                    </span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-title-md text-title-md text-on-surface">
+                      Camera-Ready &amp; Registration
+                    </span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Final manuscript upload and fee settlement
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="font-label-lg text-label-lg text-primary bg-primary-fixed px-3 py-1 rounded text-right whitespace-nowrap"
+                >
+                  Dec 03, 2026
+                </span>
+              </div>
+              <!-- Date Item 5 -->
+              <div
+                class="bg-primary text-on-primary p-space-md rounded-xl flex items-center justify-between shadow-sm"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      event
+                    </span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-title-md text-title-md font-bold">
+                      Conference Day
+                    </span>
+                    <span
+                      class="font-body-sm text-body-sm text-primary-fixed-dim"
+                    >
+                      Inauguration, Keynotes &amp; Parallel Sessions
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="font-label-lg text-label-lg bg-surface text-primary font-bold px-3 py-1 rounded text-right whitespace-nowrap"
+                >
+                  Dec 08, 2026
+                </span>
+              </div>
+              <!-- Action to View Full Schedule Matrix -->
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 pt-1"
+              >
+                <span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Inaugural keynote, plenary honors &amp; 4 parallel track
+                  sessions
+                </span>
+                <a
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded shadow-sm hover:bg-secondary transition-colors"
+                  href="#schedule"
+                  id="dates-view-schedule-btn"
+                >
+                  <span>View Schedule</span>
+                  <span class="material-symbols-outlined text-[16px]">
+                    arrow_forward
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Technical Tracks Accordion -->
+        <section
+          class="w-full px-gutter-mobile py-space-xl bg-surface"
+          id="tracks"
+        >
+          <div
+            class="max-w-4xl mx-auto flex flex-col gap-space-lg"
+            id="tracks-section"
+          >
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-label-mono font-label-mono uppercase text-secondary font-bold tracking-widest"
+              >
+                Call for Papers
+              </span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+              >
+                Technical Tracks
+              </h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Authors are invited to submit original research papers in the
+                following key disciplinary domains.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3" id="tracks-accordion">
+              <!-- Track 1 -->
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden track-card"
+              >
+                <button
+                  class="w-full p-space-md flex items-center justify-between text-left track-toggle hover:bg-surface-container-low transition-colors"
+                  type="button"
+                >
+                  <div class="flex items-center gap-3 min-w-0">
+                    <span
+                      class="text-label-mono font-label-mono px-2 py-1 bg-secondary-fixed text-on-secondary-fixed rounded font-bold"
+                    >
+                      TRACK 01
+                    </span>
+                    <h3
+                      class="font-title-md text-title-md font-semibold text-primary truncate"
+                    >
+                      Generative AI &amp; Advanced Machine Learning
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary track-icon transition-transform"
+                  >
+                    expand_more
+                  </span>
+                </button>
+                <div
+                  class="px-space-md pb-space-md track-content flex flex-col gap-2"
+                >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Focuses on foundational architectures, large language model
+                    training, and ethical generative models.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      LLMs &amp; Foundation Models
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Prompt Engineering
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      XAI &amp; Ethical AI
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Computer Vision &amp; NLP
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Reinforcement Learning &amp; Autonomous Agents
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Track 2 -->
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden track-card"
+              >
+                <button
+                  class="w-full p-space-md flex items-center justify-between text-left track-toggle hover:bg-surface-container-low transition-colors"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <div class="flex items-center gap-3 min-w-0">
+                    <span
+                      class="text-label-mono font-label-mono px-2 py-1 bg-secondary-fixed text-on-secondary-fixed rounded font-bold"
+                    >
+                      TRACK 02
+                    </span>
+                    <h3
+                      class="font-title-md text-title-md font-semibold text-primary truncate"
+                    >
+                      AI in Healthcare &amp; Medical Informatics
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary track-icon transition-transform"
+                    style="transform: rotate(-90deg);"
+                  >
+                    expand_more
+                  </span>
+                </button>
+                <div
+                  class="px-space-md pb-space-md track-content flex flex-col gap-2 hidden"
+                >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Applying machine intelligence to medical diagnostic
+                    pathways, bio-computational modeling, and clinical
+                    informatics.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Disease Prediction &amp; Diagnostics
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Clinical Decision Support Systems
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Smart Biomedical &amp; Wearables
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Medical Imaging (MRI/CT Analysis)
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Drug Discovery &amp; Bioinformatics
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Track 3 -->
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden track-card"
+              >
+                <button
+                  class="w-full p-space-md flex items-center justify-between text-left track-toggle hover:bg-surface-container-low transition-colors"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <div class="flex items-center gap-3 min-w-0">
+                    <span
+                      class="text-label-mono font-label-mono px-2 py-1 bg-secondary-fixed text-on-secondary-fixed rounded font-bold"
+                    >
+                      TRACK 03
+                    </span>
+                    <h3
+                      class="font-title-md text-title-md font-semibold text-primary truncate"
+                    >
+                      Edge AI, IoT &amp; Smart Infrastructure
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary track-icon transition-transform"
+                    style="transform: rotate(-90deg);"
+                  >
+                    expand_more
+                  </span>
+                </button>
+                <div
+                  class="px-space-md pb-space-md track-content flex flex-col gap-2 hidden"
+                >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Exploration of low-power decentralized inference, ubiquitous
+                    sensor networks, and next-generation smart ecosystems.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Edge/Fog Computing Models
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      IoT Architectures &amp; WSN
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Smart Cities &amp; Autonomous Vehicles
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      5G/6G &amp; Cyber-Physical Systems
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Track 4 -->
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden track-card"
+              >
+                <button
+                  class="w-full p-space-md flex items-center justify-between text-left track-toggle hover:bg-surface-container-low transition-colors"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <div class="flex items-center gap-3 min-w-0">
+                    <span
+                      class="text-label-mono font-label-mono px-2 py-1 bg-secondary-fixed text-on-secondary-fixed rounded font-bold"
+                    >
+                      TRACK 04
+                    </span>
+                    <h3
+                      class="font-title-md text-title-md font-semibold text-primary truncate"
+                    >
+                      Cybersecurity, Blockchain &amp; Trustworthy Computing
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary track-icon transition-transform"
+                    style="transform: rotate(-90deg);"
+                  >
+                    expand_more
+                  </span>
+                </button>
+                <div
+                  class="px-space-md pb-space-md track-content flex flex-col gap-2 hidden"
+                >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Techniques for secure computational environments,
+                    cryptographic verification, and distributed threat
+                    countermeasures.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      AI-Driven Threat Detection
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Blockchain &amp; Smart Contracts
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Privacy-Preserving Federated ML
+                    </span>
+                    <span
+                      class="text-label-md font-label-md px-2.5 py-1 bg-surface-container rounded text-on-surface-variant"
+                    >
+                      Secure Cloud &amp; Big Data Architectures
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Registration & Interactive APC Calculator -->
+        <section
+          id="registration"
+          class="w-full px-gutter-mobile py-space-xl bg-surface-container-low"
+        >
+          <div class="max-w-4xl mx-auto flex flex-col gap-space-lg">
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-label-mono font-label-mono uppercase text-secondary font-bold tracking-widest"
+              >
+                Fees &amp; Publication
+              </span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+              >
+                Registration &amp; APC Estimator
+              </h2>
+            </div>
+            <!-- Publication Statement Notice -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-3 shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-secondary text-[24px] shrink-0 mt-0.5"
+              >
+                menu_book
+              </span>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="font-label-lg text-label-lg font-bold text-secondary"
+                >
+                  Official Publication Guarantee
+                </span>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  All accepted and registered papers will be published as
+                  open-access manuscripts in the
+                  <span class="font-semibold text-primary">
+                    International Journal of Humanities Science Innovations and
+                    Management Studies (IJHSIMS)
+                  </span>
+                  , which features Google Scholar indexing.
+                </p>
+              </div>
+            </div>
+            <!-- Pricing Comparison Tiers -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-sm"
+              >
+                <div class="flex flex-col gap-2">
+                  <span
+                    class="text-label-mono font-label-mono uppercase text-secondary font-bold"
+                  >
+                    Indian Authors
+                  </span>
+                  <div class="flex items-baseline gap-1">
+                    <span
+                      class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+                    >
+                      ₹2,000
+                    </span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Base APC
+                    </span>
+                  </div>
+                  <ul
+                    class="flex flex-col gap-1.5 pt-2 text-body-sm font-body-sm text-on-surface-variant"
+                  >
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-[16px] text-secondary"
+                      >
+                        check
+                      </span>
+                      Includes up to 10 pages
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-[16px] text-secondary"
+                      >
+                        check
+                      </span>
+                      Covers up to 5 authors
+                    </li>
+                    <li class="flex items-center gap-2 text-outline">
+                      <span class="material-symbols-outlined text-[16px]">
+                        add
+                      </span>
+                      Extra author: ₹300 each
+                    </li>
+                    <li class="flex items-center gap-2 text-outline">
+                      <span class="material-symbols-outlined text-[16px]">
+                        add
+                      </span>
+                      Extra page: ₹200 each
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    class="register-trigger-btn mt-3 w-full py-2.5 px-3 bg-secondary text-on-secondary font-label-md text-label-md rounded shadow-sm hover:bg-secondary/90 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    data-category="indian"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      how_to_reg
+                    </span>
+                    <span>Register Now</span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-sm"
+              >
+                <div class="flex flex-col gap-2">
+                  <span
+                    class="text-label-mono font-label-mono uppercase text-tertiary-container font-bold"
+                  >
+                    Foreign Authors
+                  </span>
+                  <div class="flex items-baseline gap-1">
+                    <span
+                      class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+                    >
+                      $35
+                      <span
+                        class="text-body-md font-body-md text-on-surface-variant"
+                      >
+                        / 35€
+                      </span>
+                    </span>
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Base APC
+                    </span>
+                  </div>
+                  <ul
+                    class="flex flex-col gap-1.5 pt-2 text-body-sm font-body-sm text-on-surface-variant"
+                  >
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >
+                        check
+                      </span>
+                      Includes up to 10 pages
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >
+                        check
+                      </span>
+                      Covers up to 5 authors
+                    </li>
+                    <li class="flex items-center gap-2 text-outline">
+                      <span class="material-symbols-outlined text-[16px]">
+                        add
+                      </span>
+                      Extra author: $3 / 3€ each
+                    </li>
+                    <li class="flex items-center gap-2 text-outline">
+                      <span class="material-symbols-outlined text-[16px]">
+                        add
+                      </span>
+                      Extra page: $2 / 2€ each
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    class="register-trigger-btn mt-3 w-full py-2.5 px-3 bg-tertiary-container text-on-tertiary font-label-md text-label-md rounded shadow-sm hover:bg-tertiary transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    data-category="foreign"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      how_to_reg
+                    </span>
+                    <span>Register Now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Live APC Calculator Widget -->
+            <div
+              class="bg-primary text-on-primary p-space-lg rounded-xl flex flex-col gap-space-md shadow-md"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary-fixed">
+                    calculate
+                  </span>
+                  <h3
+                    class="font-title-md text-title-md font-bold text-on-primary"
+                  >
+                    Interactive APC Calculator
+                  </h3>
+                </div>
+                <span
+                  class="text-label-mono font-label-mono uppercase bg-on-primary/10 text-secondary-fixed px-2 py-0.5 rounded"
+                >
+                  Live Estimate
+                </span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <!-- Currency / Nationality Selector -->
+                <div class="flex flex-col gap-1">
+                  <label
+                    class="font-label-md text-label-md text-primary-fixed"
+                    for="calc-author-type"
+                  >
+                    Author Category
+                  </label>
+                  <select
+                    class="bg-surface text-on-surface font-body-md text-body-md p-2.5 rounded shadow-sm focus:outline-none"
+                    id="calc-author-type"
+                  >
+                    <option selected="" value="indian">
+                      Indian Authors (INR ₹)
+                    </option>
+                    <option value="foreign">Foreign Authors (USD $)</option>
+                  </select>
+                </div>
+                <!-- Authors Count -->
+                <div class="flex flex-col gap-1">
+                  <label
+                    class="font-label-md text-label-md text-primary-fixed"
+                    for="calc-authors-count"
+                  >
+                    Number of Authors
+                  </label>
+                  <input
+                    class="bg-surface text-on-surface font-body-md text-body-md p-2.5 rounded shadow-sm focus:outline-none"
+                    id="calc-authors-count"
+                    max="25"
+                    min="1"
+                    type="number"
+                    value="5"
+                  />
+                </div>
+                <!-- Pages Count -->
+                <div class="flex flex-col gap-1">
+                  <label
+                    class="font-label-md text-label-md text-primary-fixed"
+                    for="calc-pages-count"
+                  >
+                    Total Manuscript Pages
+                  </label>
+                  <input
+                    class="bg-surface text-on-surface font-body-md text-body-md p-2.5 rounded shadow-sm focus:outline-none"
+                    id="calc-pages-count"
+                    max="50"
+                    min="1"
+                    type="number"
+                    value="10"
+                  />
+                </div>
+              </div>
+              <!-- Calculated Summary Box & CTA -->
+              <div
+                class="bg-on-primary/10 rounded-xl p-space-md flex flex-col sm:flex-row items-center justify-between gap-3"
+              >
+                <div class="flex flex-col text-center sm:text-left">
+                  <span
+                    class="text-label-mono font-label-mono uppercase text-secondary-fixed"
+                  >
+                    Calculated Article Processing Charge
+                  </span>
+                  <span
+                    class="text-body-sm font-body-sm text-primary-fixed-dim"
+                    id="calc-breakdown-text"
+                  >
+                    Base 10 pages, 5 authors included
+                  </span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-3">
+                  <span
+                    class="font-display-hero-mobile text-display-hero-mobile font-extrabold text-on-primary"
+                    id="calc-total-display"
+                  >
+                    ₹2,000
+                  </span>
+                  <button
+                    id="calc-register-btn"
+                    type="button"
+                    class="py-2.5 px-5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md rounded shadow-sm transition-transform active:scale-95 flex items-center gap-2 cursor-pointer"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">
+                      how_to_reg
+                    </span>
+                    <span>Register Now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Conference Schedule Matrix -->
+        <section
+          id="schedule"
+          class="w-full px-gutter-mobile py-space-xl bg-surface"
+        >
+          <div
+            class="max-w-4xl mx-auto flex flex-col gap-space-lg"
+            id="conference-schedule"
+          >
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-label-mono font-label-mono uppercase text-secondary font-bold tracking-widest"
+              >
+                December 08, 2026
+              </span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+              >
+                Conference Schedule
+              </h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                A fully orchestrated timetable featuring inaugural honors,
+                plenary addresses, and concurrent tracks.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <!-- 08:30 -->
+              <div
+                class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-primary bg-primary-fixed px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  08:30–09:30
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-title-md text-title-md font-semibold text-on-surface"
+                  >
+                    Registration &amp; High Tea
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Badge collection, kit distribution, and participant
+                    networking.
+                  </span>
+                </div>
+              </div>
+              <!-- 09:30 -->
+              <div
+                class="bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-3 shadow-sm"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-tertiary-container bg-tertiary-fixed px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  09:30–10:15
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-title-md text-title-md font-semibold text-primary"
+                  >
+                    Inaugural Ceremony
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Welcome Address by Conference Chair, Deep Prajwalan
+                    (Lighting of the Lamp), Words of wisdom by Director and
+                    Director General.
+                  </span>
+                </div>
+              </div>
+              <!-- 10:15 -->
+              <div
+                class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-primary bg-primary-fixed px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  10:15–11:15
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-title-md text-title-md font-semibold text-on-surface"
+                  >
+                    Plenary Keynote Sessions 1 &amp; 2
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Keynote 1 (India: National Perspective) &amp; Keynote 2
+                    (Virtual: International Innovations).
+                  </span>
+                </div>
+              </div>
+              <!-- 11:15 -->
+              <div
+                class="bg-surface-container-highest p-space-sm rounded-lg flex items-center gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-outline bg-surface-container px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  11:15–11:30
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface-variant"
+                >
+                  Tea / Coffee Break
+                </span>
+              </div>
+              <!-- 11:30 -->
+              <div
+                class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-primary bg-primary-fixed px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  11:30–12:30
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-title-md text-title-md font-semibold text-on-surface"
+                  >
+                    Plenary Keynote Sessions 3 &amp; 4
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Keynote 3 (India: Engineering Frontiers) &amp; Keynote 4
+                    (Virtual: AIT Thailand Insights).
+                  </span>
+                </div>
+              </div>
+              <!-- 12:30 -->
+              <div
+                class="bg-secondary-fixed text-on-secondary-fixed p-space-sm rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-on-secondary bg-secondary px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  12:30–14:00
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-title-md font-bold">
+                    Technical Session I (Parallel Tracks)
+                  </span>
+                  <span class="font-body-sm text-body-sm">
+                    Oral presentations across Track 1, Track 2, Track 3, and
+                    Track 4 simultaneously.
+                  </span>
+                </div>
+              </div>
+              <!-- 14:00 -->
+              <div
+                class="bg-surface-container-highest p-space-sm rounded-lg flex items-center gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-outline bg-surface-container px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  14:00–15:00
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface-variant"
+                >
+                  Networking Conference Lunch
+                </span>
+              </div>
+              <!-- 15:00 -->
+              <div
+                class="bg-secondary-fixed text-on-secondary-fixed p-space-sm rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-on-secondary bg-secondary px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  15:00–16:30
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-title-md font-bold">
+                    Technical Session II (Parallel Tracks)
+                  </span>
+                  <span class="font-body-sm text-body-sm">
+                    Second wave of oral presentations across all four tracks
+                    (In-person &amp; Virtual Rooms).
+                  </span>
+                </div>
+              </div>
+              <!-- 16:30 -->
+              <div
+                class="bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-3 shadow-sm"
+              >
+                <span
+                  class="font-label-mono text-label-mono font-bold text-primary bg-primary-fixed px-2 py-1 rounded shrink-0 w-24 text-center"
+                >
+                  16:30–17:30
+                </span>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-title-md text-title-md font-semibold text-primary"
+                  >
+                    Valedictory Ceremony &amp; High Tea
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Conference summary report, Best Paper Award announcements,
+                    certificate distribution, and formal Vote of Thanks.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Organizing Committee -->
+        <section
+          id="committees"
+          class="w-full px-gutter-mobile py-space-xl bg-surface-container-low"
+        >
+          <div
+            class="max-w-4xl mx-auto flex flex-col gap-space-lg"
+            id="organizing-committee"
+          >
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-label-mono font-label-mono uppercase text-secondary font-bold tracking-widest"
+              >
+                Leadership &amp; Governance
+              </span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+              >
+                Organizing Committee
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+              <!-- Patrons -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1"
+              >
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary font-bold"
+                >
+                  Patrons
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-primary"
+                >
+                  Mr. Naman Bansal
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-primary"
+                >
+                  Mr. Yash Agarwal
+                </span>
+              </div>
+              <!-- Co-Patrons -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1"
+              >
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary font-bold"
+                >
+                  Co-Patrons
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-primary"
+                >
+                  Prof. M. J. Nigam
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-primary"
+                >
+                  Prof. Nitin Kumar Tripathi
+                </span>
+              </div>
+              <!-- General Chair -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1"
+              >
+                <span
+                  class="text-label-mono font-label-mono uppercase text-tertiary-container font-bold"
+                >
+                  General Chair
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                >
+                  Prof. (Dr.) Parag Jain
+                </span>
+              </div>
+              <!-- Technical Program Chair -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1"
+              >
+                <span
+                  class="text-label-mono font-label-mono uppercase text-tertiary-container font-bold"
+                >
+                  Technical Program Chair
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                >
+                  Dr. Lokesh Kumar
+                </span>
+              </div>
+              <!-- Conference Chair & Co-Chair -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1"
+              >
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary font-bold"
+                >
+                  Conference Chair &amp; Co-Chair
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                >
+                  Mr. Gaurav Chaturvedi
+                  <span class="text-body-sm font-body-sm text-outline">
+                    (Chair)
+                  </span>
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                >
+                  Dr. Deepak Arya
+                  <span class="text-body-sm font-body-sm text-outline">
+                    (Co-Chair)
+                  </span>
+                </span>
+              </div>
+              <!-- Convenor & Co-Convenor -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1"
+              >
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary font-bold"
+                >
+                  Convenors
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                >
+                  Dr. Abhay Bhatia
+                  <span class="text-body-sm font-body-sm text-outline">
+                    (Convenor)
+                  </span>
+                </span>
+                <span
+                  class="font-title-md text-title-md font-semibold text-on-surface"
+                >
+                  Dr. Himanshu Gupta
+                  <span class="text-body-sm font-body-sm text-outline">
+                    (Co-Convenor)
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Venue & Submission Banner -->
+        <section
+          id="contact"
+          class="w-full px-gutter-mobile py-space-xl bg-surface"
+        >
+          <div class="max-w-4xl mx-auto flex flex-col gap-space-md">
+            <!-- Venue Card -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded bg-primary-fixed text-primary flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[28px]">
+                    location_on
+                  </span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="text-label-mono font-label-mono uppercase text-outline"
+                  >
+                    Conference Venue
+                  </span>
+                  <span
+                    class="font-title-md text-title-md font-bold text-primary"
+                  >
+                    Roorkee Institute of Technology
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Roorkee, Uttarakhand, India
+                  </span>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row items-center gap-3">
+                <a
+                  class="text-label-md font-label-md text-secondary underline hover:text-primary"
+                  href="mailto:icscai@ritroorkee.com"
+                >
+                  icscai@ritroorkee.com
+                </a>
+                <a
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container text-primary font-label-md text-label-md rounded hover:bg-surface-container-high transition-colors shadow-sm cursor-pointer"
+                  href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Inquiry"
+                  id="contact-us-btn"
+                >
+                  <span class="material-symbols-outlined text-[16px]">
+                    mail
+                  </span>
+                  <span>Contact Us</span>
+                </a>
+              </div>
+            </div>
+            <!-- Action Card -->
+            <div
+              class="bg-gradient-to-r from-primary to-primary-container text-on-primary p-space-lg rounded-xl flex flex-col items-center text-center gap-space-md shadow-md"
+            >
+              <span
+                class="text-label-mono font-label-mono uppercase text-secondary-fixed font-bold tracking-widest"
+              >
+                Call for Submissions Open
+              </span>
+              <h3
+                class="font-headline-lg-mobile text-headline-lg-mobile font-bold"
+              >
+                Submit Your Research Paper
+              </h3>
+              <p
+                class="font-body-sm text-body-sm text-primary-fixed-dim max-w-lg"
+              >
+                Join international scholars in Uttarakhand or via virtual
+                session stream. Manuscripts undergo double-blind peer review
+                before publication in IJHSIMS.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md pt-2"
+              >
+                <a
+                  class="w-full py-3 px-6 bg-tertiary-container text-on-tertiary font-label-lg text-label-lg rounded shadow hover:bg-tertiary transition-transform active:scale-98 flex items-center justify-center gap-2"
+                  href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Paper%20Submission"
+                >
+                  <span class="material-symbols-outlined text-[18px]">
+                    send
+                  </span>
+                  <span> Email Submission to Secretariat </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Partner Logos & Institutional Accreditation Strip -->
+        <section
+          class="w-full px-gutter-mobile py-space-lg bg-surface-container-lowest"
+        >
+          <div
+            class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                alt="RIT Roorkee NAAC A++ Logo"
+                class="h-12 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0ZLg0We1AsZrZ4TGh24JqEWQwSir03V7PUGzyBDb1MOL7o-MoRoJZGjCcC3_APJE-1FueADvs-kHSj3t3r0_ueqnyDC97bR1sj6N1ef6OQZzKa2uRzg86Z4djIGQ9gXORpkrL6wHCNePMRvneRwRsWtVQs-yOkQPmiPPC0d0MVc_81ZfRD7mbNqJ6QIXOqQWE2B5m9wNCRRhzyVhs7c_JTuxY65R5x0dDcX8lU9HjESt72NWFDHOq"
+              />
+              <div class="flex flex-col">
+                <span
+                  class="font-title-md text-title-md font-bold text-primary"
+                >
+                  RIT Roorkee
+                </span>
+                <span class="font-label-mono text-label-mono text-outline">
+                  NAAC A++ Accredited Institution
+                </span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-on-surface-variant">
+              <span
+                class="material-symbols-outlined text-[20px] text-secondary"
+              >
+                handshake
+              </span>
+              <div class="flex flex-col">
+                <span
+                  class="font-label-mono text-label-mono uppercase text-outline"
+                >
+                  Technical Partner
+                </span>
+                <span
+                  class="font-label-lg text-label-lg font-semibold text-primary"
+                >
+                  Asian Institute of Technology (AIT), Thailand
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Micro-Interactions Script -->
+      <footer
+        class="mt-space-2xl bg-surface-container-low px-gutter-mobile py-space-xl"
+      >
+        <div class="flex flex-col gap-space-md">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-space-xs">
+              <img
+                alt="logo3.png"
+                class="h-7 w-auto object-contain"
+                src="logo3.png"
+              />
+              <span
+                class="font-headline-sm text-headline-sm font-bold text-primary"
+              >
+                RIT Roorkee
+              </span>
+            </div>
+            <span
+              class="font-label-mono text-label-mono text-secondary px-space-sm py-0.5 bg-secondary-fixed rounded"
+            >
+              Est. Roorkee
+            </span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            International Conference on Smart Computing &amp; Artificial
+            Intelligence (ICSCAI 2026), convening scholars and technical
+            researchers globally.
+          </p>
+          <div class="flex flex-col gap-1 py-space-xs">
+            <span
+              class="font-label-mono text-label-mono uppercase tracking-wider text-outline"
+            >
+              Academic &amp; Technical Association
+            </span>
+            <span
+              class="font-body-md text-body-md font-semibold text-on-surface"
+            >
+              Asian Institute of Technology (AIT), Thailand
+            </span>
+          </div>
+          <div class="flex flex-col gap-0.5">
+            <span
+              class="font-label-mono text-label-mono uppercase tracking-wider text-outline"
+            >
+              Conference Secretariat
+            </span>
+            <a
+              class="font-body-sm text-body-sm text-primary font-medium underline"
+              href="mailto:icscai@ritroorkee.com"
+            >
+              icscai@ritroorkee.com
+            </a>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">
+              Roorkee Institute of Technology, Uttarakhand, India
+            </span>
+          </div>
+          <div
+            class="pt-space-sm flex items-center justify-between font-label-mono text-label-mono text-outline"
+          >
+            <span> © 2026 ICSCAI &amp; RIT Roorkee </span>
+            <span> All Rights Reserved </span>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <nav
+      class="fixed bottom-0 w-full z-40 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.06)] border-t border-outline/10"
+      data-active-classes="text-primary font-semibold"
+      id="bottom-nav"
+    >
+      <div class="flex justify-around items-center h-16 px-space-xs">
+        <a
+          aria-current="page"
+          class="bottom-nav-item flex flex-col items-center justify-center gap-0.5 w-16 h-12 transition-colors text-primary font-semibold"
+          data-path="home"
+          href="#home"
+        >
+          <span class="material-symbols-outlined text-[20px]"> home </span>
+          <span class="font-label-md text-label-md"> Home </span>
+        </a>
+        <a
+          class="bottom-nav-item flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-colors"
+          data-path="tracks-&amp;-call-for-papers"
+          href="#tracks"
+        >
+          <span class="material-symbols-outlined text-[20px]"> menu_book </span>
+          <span class="font-label-md text-label-md"> Tracks </span>
+        </a>
+        <a
+          class="bottom-nav-item flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-colors"
+          data-path="important-dates"
+          href="#important-dates"
+        >
+          <span class="material-symbols-outlined text-[20px]">
+            event_available
+          </span>
+          <span class="font-label-md text-label-md"> Dates </span>
+        </a>
+        <a
+          class="bottom-nav-item flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-colors"
+          data-path="conference-schedule"
+          href="#schedule"
+        >
+          <span class="material-symbols-outlined text-[20px]">
+            calendar_today
+          </span>
+          <span class="font-label-md text-label-md"> Schedule </span>
+        </a>
+        <a
+          class="bottom-nav-item flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-colors"
+          data-path="registration"
+          href="#registration"
+        >
+          <span class="material-symbols-outlined text-[20px]">
+            how_to_reg
+          </span>
+          <span class="font-label-md text-label-md"> Register </span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Registration Modal Dialog -->
+    <div
+      id="registration-modal"
+      class="fixed inset-0 z-50 pointer-events-none opacity-0 bg-inverse-surface/50 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-reg-title"
+    >
+      <div
+        id="registration-modal-panel"
+        class="bg-surface-container-lowest text-on-surface rounded-2xl shadow-2xl max-w-lg w-full max-h-[92vh] flex flex-col transform scale-95 transition-all duration-300 overflow-hidden pointer-events-auto border border-outline/10"
+      >
+        <!-- Modal Header -->
+        <div
+          class="p-space-md border-b border-outline/10 flex items-center justify-between bg-surface-container-low"
+        >
+          <div class="flex items-center gap-2.5">
+            <div
+              class="w-9 h-9 rounded-full bg-primary-fixed text-primary flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >how_to_reg</span
+              >
+            </div>
+            <div>
+              <h3
+                id="modal-reg-title"
+                class="font-title-md text-title-md font-bold text-primary"
+              >
+                Conference Registration
+              </h3>
+              <p
+                class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider"
+              >
+                ICSCAI 2026 • RIT Roorkee
+              </p>
+            </div>
+          </div>
+          <button
+            id="modal-close-btn"
+            type="button"
+            aria-label="Close dialog"
+            class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant transition-colors cursor-pointer"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+
+        <!-- Modal Body / Form -->
+        <div class="p-space-md overflow-y-auto flex-1">
+          <!-- Active Form -->
+          <form id="conference-reg-form" novalidate class="flex flex-col gap-3">
+            <!-- Error Alert Box -->
+            <div
+              id="reg-error-box"
+              class="hidden p-3 rounded-lg bg-error-container text-on-error-container text-body-sm font-body-sm flex items-start gap-2"
+            >
+              <span
+                class="material-symbols-outlined text-[20px] text-error shrink-0"
+                >error</span
+              >
+              <span id="reg-error-text"
+                >Please complete all required fields.</span
+              >
+            </div>
+
+            <!-- Full Name -->
+            <div class="flex flex-col gap-1">
+              <label
+                for="reg-name"
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Full Name <span class="text-error">*</span>
+              </label>
+              <input
+                id="reg-name"
+                type="text"
+                placeholder="e.g. Dr. Jane Smith / Prof. Rajesh Sharma"
+                class="w-full p-2.5 rounded bg-surface border border-outline/30 focus:border-primary focus:outline-none text-body-md"
+                required
+              />
+              <span class="text-[12px] text-error hidden" id="err-reg-name"
+                >Please provide your full name.</span
+              >
+            </div>
+
+            <!-- Email Address -->
+            <div class="flex flex-col gap-1">
+              <label
+                for="reg-email"
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Academic / Official Email <span class="text-error">*</span>
+              </label>
+              <input
+                id="reg-email"
+                type="email"
+                placeholder="name@institution.edu / name@domain.com"
+                class="w-full p-2.5 rounded bg-surface border border-outline/30 focus:border-primary focus:outline-none text-body-md"
+                required
+              />
+              <span class="text-[12px] text-error hidden" id="err-reg-email"
+                >Please provide a valid email address.</span
+              >
+            </div>
+
+            <!-- Phone / WhatsApp -->
+            <div class="flex flex-col gap-1">
+              <label
+                for="reg-phone"
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Phone / Mobile (with country code)
+                <span class="text-error">*</span>
+              </label>
+              <input
+                id="reg-phone"
+                type="tel"
+                placeholder="+91 98765 43210"
+                class="w-full p-2.5 rounded bg-surface border border-outline/30 focus:border-primary focus:outline-none text-body-md"
+                required
+              />
+              <span class="text-[12px] text-error hidden" id="err-reg-phone"
+                >Please provide a valid phone number.</span
+              >
+            </div>
+
+            <!-- Affiliation -->
+            <div class="flex flex-col gap-1">
+              <label
+                for="reg-affiliation"
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Affiliation / Department &amp; University
+                <span class="text-error">*</span>
+              </label>
+              <input
+                id="reg-affiliation"
+                type="text"
+                placeholder="e.g. Dept. of CSE, Roorkee Institute of Technology / AIT Thailand"
+                class="w-full p-2.5 rounded bg-surface border border-outline/30 focus:border-primary focus:outline-none text-body-md"
+                required
+              />
+              <span
+                class="text-[12px] text-error hidden"
+                id="err-reg-affiliation"
+                >Please enter your institutional affiliation.</span
+              >
+            </div>
+
+            <!-- Delegate Category -->
+            <div class="flex flex-col gap-1">
+              <label
+                for="reg-category"
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Registration Tier / Category <span class="text-error">*</span>
+              </label>
+              <select
+                id="reg-category"
+                class="w-full p-2.5 rounded bg-surface border border-outline/30 focus:border-primary focus:outline-none text-body-md"
+              >
+                <option value="indian">
+                  Indian Author (Base ₹2,000 for 10 pages, 5 authors)
+                </option>
+                <option value="foreign">
+                  Foreign Author (Base $35 / €35 for 10 pages, 5 authors)
+                </option>
+                <option value="student_indian">
+                  Student Attendee / Non-Author — India (₹1,000)
+                </option>
+                <option value="student_foreign">
+                  Student Attendee / Non-Author — Foreign ($20)
+                </option>
+                <option value="industry">
+                  Industry Delegate / General Participant (₹3,000)
+                </option>
+              </select>
+            </div>
+
+            <!-- Paper ID & Title -->
+            <div class="flex flex-col gap-1" id="reg-paper-group">
+              <label
+                for="reg-paper"
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Paper ID &amp; Manuscript Title
+                <span id="reg-paper-req" class="text-error">* <span class="text-[11px] font-normal text-on-surface-variant">(Required for authors)</span></span>
+              </label>
+              <input
+                id="reg-paper"
+                type="text"
+                placeholder="e.g. ICSCAI-2026-104: Scalable Edge Inference"
+                class="w-full p-2.5 rounded bg-surface border border-outline/30 focus:border-primary focus:outline-none text-body-md"
+              />
+              <span class="text-[12px] text-error hidden" id="err-reg-paper"
+                >Please enter your Paper ID and Title.</span
+              >
+            </div>
+
+            <!-- Presentation Mode -->
+            <div class="flex flex-col gap-1">
+              <label
+                class="font-label-md text-label-md font-semibold text-primary"
+              >
+                Presentation Mode
+              </label>
+              <div class="grid grid-cols-2 gap-2">
+                <label
+                  class="flex items-center gap-2 p-2.5 rounded bg-surface border border-outline/20 cursor-pointer hover:bg-surface-container-low"
+                >
+                  <input
+                    type="radio"
+                    name="reg-mode"
+                    value="In-Person"
+                    checked
+                    class="text-primary"
+                  />
+                  <span class="text-body-sm font-body-sm"
+                    >In-Person (Roorkee)</span
+                  >
+                </label>
+                <label
+                  class="flex items-center gap-2 p-2.5 rounded bg-surface border border-outline/20 cursor-pointer hover:bg-surface-container-low"
+                >
+                  <input
+                    type="radio"
+                    name="reg-mode"
+                    value="Virtual"
+                    class="text-primary"
+                  />
+                  <span class="text-body-sm font-body-sm"
+                    >Virtual (Online Stream)</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Fee Summary Box -->
+            <div
+              class="bg-primary/5 border border-primary/20 rounded-xl p-3 flex items-center justify-between"
+            >
+              <div class="flex flex-col">
+                <span
+                  class="text-label-mono font-label-mono uppercase text-secondary font-bold"
+                  >Estimated Registration Fee</span
+                >
+                <span
+                  class="text-body-sm font-body-sm text-on-surface-variant"
+                  id="reg-fee-details"
+                  >Calculated based on selected tier</span
+                >
+              </div>
+              <span
+                class="font-title-md text-title-md font-bold text-primary"
+                id="reg-fee-total"
+                >₹2,000</span
+              >
+            </div>
+
+            <!-- Notice -->
+            <p class="text-[11px] text-outline italic">
+              * Client verification only. Formal confirmation and tax invoice
+              are issued by RIT Roorkee upon payment proof verification at
+              icscai@ritroorkee.com.
+            </p>
+
+            <!-- Action Button -->
+            <button
+              type="submit"
+              id="reg-submit-btn"
+              class="w-full py-3 px-4 bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >verified</span
+              >
+              <span>Complete Registration</span>
+            </button>
+          </form>
+
+          <!-- Success Confirmation State (Hidden initially) -->
+          <div
+            id="reg-success-view"
+            class="hidden flex flex-col items-center text-center py-4 gap-3"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-sm"
+            >
+              <span class="material-symbols-outlined text-[32px]"
+                >check_circle</span
+              >
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4
+                class="font-headline-sm text-headline-sm font-bold text-primary"
+              >
+                Registration Validated!
+              </h4>
+              <p
+                class="font-body-sm text-body-sm text-on-surface-variant max-w-sm"
+              >
+                Thank you, <strong id="success-reg-name">Author</strong>. Your
+                conference registration details have been verified locally.
+              </p>
+            </div>
+
+            <!-- Summary Card -->
+            <div
+              class="w-full bg-surface-container-low p-3.5 rounded-xl border border-outline/10 text-left flex flex-col gap-1.5 text-body-sm"
+            >
+              <div class="flex justify-between border-b border-outline/10 pb-1">
+                <span class="text-outline">Category:</span>
+                <span
+                  class="font-semibold text-primary"
+                  id="success-reg-category"
+                  >Indian Author</span
+                >
+              </div>
+              <div class="flex justify-between border-b border-outline/10 pb-1">
+                <span class="text-outline">Mode:</span>
+                <span class="font-semibold text-primary" id="success-reg-mode"
+                  >In-Person</span
+                >
+              </div>
+              <div class="flex justify-between border-b border-outline/10 pb-1">
+                <span class="text-outline">Paper / Subject:</span>
+                <span
+                  class="font-semibold text-primary truncate max-w-[200px]"
+                  id="success-reg-paper"
+                  >-</span
+                >
+              </div>
+              <div class="flex justify-between pt-0.5">
+                <span class="text-outline font-semibold"
+                  >Total Fee Payable:</span
+                >
+                <span
+                  class="font-bold text-secondary text-title-md"
+                  id="success-reg-fee"
+                  >₹2,000</span
+                >
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2 w-full pt-2">
+              <a
+                id="success-email-draft-btn"
+                class="w-full py-2.5 px-4 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2"
+                href="mailto:icscai@ritroorkee.com?subject=ICSCAI%202026%20Registration%20Details"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >outgoing_mail</span
+                >
+                <span>Email Details to Secretariat</span>
+              </a>
+              <button
+                id="success-done-btn"
+                type="button"
+                class="w-full py-2 px-4 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded-lg transition-colors cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
