@@ -1,15 +1,26 @@
-# ICSCAI 2026 website — structured Stitch export
+# ICSCAI 2026 Website
 
-## Project structure
-- `index.html` — page markup and Tailwind CDN setup
-- `css/styles.css` — custom base CSS
-- `js/tailwind-config.js` — Tailwind theme configuration
-- `js/main.js` — page interaction scripts
+International Conference on Smart Computing & Artificial Intelligence (ICSCAI 2026).
 
-## Run locally
-Open `index.html` in a browser. For best results, use VS Code Live Server.
+## Project Structure
+
+- `index.html` — Page markup and Tailwind CDN setup.
+- `css/styles.css` — Custom base CSS.
+- `js/tailwind-config.js` — Tailwind theme configuration.
+- `js/main.js` — Page interaction scripts.
+- `assets/` — Website images and brochure PDF.
+
+## Run Locally
+
+1. Open the project folder in VS Code.
+2. Open `index.html`.
+3. Right-click and select **Open with Live Server**.
+4. Your website will open in the browser.
 
 ## Notes
-- Tailwind CSS is still loaded from its CDN, as in the original Stitch export.
-- External fonts, Material Symbols, and the logo URL remain unchanged.
-- This is a structural cleanup, not a redesign or content verification.
+
+- Tailwind CSS is loaded from its CDN.
+- External fonts and Material Symbols are used.
+- The website includes responsive layouts and interactive features.
+- This project is based on the original Stitch export.
+
