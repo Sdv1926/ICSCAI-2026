@@ -32,62 +32,29 @@
    ICSCAI 2026 - KEYNOTE SPEAKERS
 ===================================== */
 
-.keynote-section {
-  width: 100%;
-  padding: 55px 20px;
-  background: #f8f6f5;
-  box-sizing: border-box;
-}
 
-.keynote-container {
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-}
-
-/* Heading */
-
-.keynote-heading {
-  margin-bottom: 30px;
-}
-
-.keynote-heading span {
-  color: #a00016;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.keynote-heading h2 {
-  color: #172f59;
-  font-size: 28px;
-  font-weight: 750;
-  margin: 8px 0;
-}
-
-.keynote-heading p {
-  color: #667085;
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Grid */
+/* Keynote Grid */
 
 .keynote-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
+  align-items: stretch;
 }
 
-/* Card */
+/* Keynote Card */
 
 .keynote-card {
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+
+  background: #ffffff;
   border: 1px solid #e8e9ed;
   border-radius: 12px;
-  overflow: hidden;
-  min-width: 0;
+
   box-shadow: 0 3px 12px rgba(23, 47, 89, 0.04);
   transition: transform 0.25s ease,
               box-shadow 0.25s ease;
@@ -98,98 +65,98 @@
   box-shadow: 0 10px 25px rgba(23, 47, 89, 0.09);
 }
 
-/* Image */
-
-
-/* Keynote Speaker Images */
+/* Speaker Image */
 
 .keynote-image {
+  position: relative;
   width: 100%;
   height: 230px;
+  flex-shrink: 0;
   overflow: hidden;
   background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
 }
 
 .keynote-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 15%;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-  .keynote-image {
-    height: 220px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 520px) {
-  .keynote-image {
-    height: 210px;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 360px) {
-  .keynote-image {
-    height: 190px;
-  }
-}
-
-
-
-/* Content */
+/* Speaker Information */
 
 .keynote-info {
-  padding: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+  background: #ffffff;
+  margin: 0;
+  z-index: 1;
 }
+
+/* Speaker Label */
 
 .keynote-label {
   display: inline-block;
+  align-self: flex-start;
+  width: fit-content;
+
   background: #fcebed;
   color: #a00016;
+
   padding: 5px 9px;
   border-radius: 4px;
+
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
+/* Speaker Name */
+
 .keynote-info h3 {
+  position: static;
+  margin: 12px 0 5px;
   color: #172f59;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 750;
-  line-height: 1.3;
-  margin: 13px 0 5px;
+  line-height: 1.35;
+  overflow-wrap: break-word;
 }
+
+/* Designation */
 
 .keynote-designation {
   color: #536176;
   font-size: 14px;
-  font-weight: 600;
+  line-height: 1.5;
   margin: 0;
 }
+
+/* Red Line */
 
 .keynote-line {
   width: 38px;
   height: 3px;
+  flex-shrink: 0;
   border-radius: 5px;
   background: #a00016;
   margin: 15px 0;
 }
 
+/* Description */
+
 .keynote-topic,
 .keynote-role {
   color: #596579;
   font-size: 13px;
-  line-height: 1.75;
+  line-height: 1.7;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .keynote-topic {
@@ -197,22 +164,21 @@
   font-weight: 600;
 }
 
+/* University */
+
 .keynote-university {
   color: #172f59;
   font-size: 13px;
   font-weight: 700;
   margin: 12px 0 0;
+  overflow-wrap: break-word;
 }
 
 /* Tablet */
 
 @media (max-width: 768px) {
-  .keynote-section {
-    padding: 40px 16px;
-  }
-
   .keynote-grid {
-    gap: 14px;
+    gap: 16px;
   }
 
   .keynote-image {
@@ -220,42 +186,30 @@
   }
 
   .keynote-info {
-    padding: 15px;
+    padding: 16px;
   }
 
   .keynote-info h3 {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 
 /* Mobile */
 
-@media (max-width: 520px) {
-  .keynote-section {
-    padding: 32px 14px;
-  }
-
-  .keynote-heading {
-    margin-bottom: 22px;
-  }
-
-  .keynote-heading h2 {
-    font-size: 23px;
-  }
-
+@media (max-width: 600px) {
   .keynote-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-    max-width: 100%;
+    gap: 20px;
   }
 
   .keynote-card {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
   }
 
   .keynote-image {
-    height: 180px;
+    height: auto;
+    aspect-ratio: 1.5 / 1;
   }
 
   .keynote-info {
@@ -265,18 +219,13 @@
   .keynote-info h3 {
     font-size: 20px;
   }
-
-  .keynote-role,
-  .keynote-topic {
-    font-size: 13px;
-  }
 }
 
-/* Small mobile */
+/* Small Mobile */
 
 @media (max-width: 360px) {
   .keynote-image {
-    height: 195px;
+    aspect-ratio: 1.4 / 1;
   }
 
   .keynote-info {
@@ -295,4 +244,5 @@
     transition: none;
   }
 }
+
 
