@@ -226,7 +226,7 @@
   }
 
   .keynote-image {
-    height: 230px;
+    height: 180px;
   }
 
   .keynote-info {
@@ -247,7 +247,7 @@
 
 @media (max-width: 360px) {
   .keynote-image {
-    height: 195px;
+    height: 160px;
   }
 
   .keynote-info {
