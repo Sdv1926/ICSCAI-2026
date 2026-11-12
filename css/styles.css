@@ -100,20 +100,31 @@
 
 /* Image */
 
-.keynote-image {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  background: #edf0f5;
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .keynote-image {
+    height: 230px;
+  }
 }
 
-.keynote-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
+/* Mobile */
+
+@media (max-width: 520px) {
+  .keynote-image {
+    height: 220px;
+  }
 }
+
+/* Small Mobile */
+
+@media (max-width: 360px) {
+  .keynote-image {
+    height: 200px;
+  }
+}
+
 
 /* Content */
 
