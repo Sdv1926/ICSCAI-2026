@@ -101,29 +101,47 @@
 /* Image */
 
 
-/* Tablet */
+/* Keynote Speaker Images */
 
+.keynote-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keynote-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Tablet */
 @media (max-width: 768px) {
   .keynote-image {
-    height: 200px;
+    height: 220px;
   }
 }
 
 /* Mobile */
-
 @media (max-width: 520px) {
   .keynote-image {
-    height: 180px;
+    height: 210px;
   }
 }
 
 /* Small Mobile */
-
 @media (max-width: 360px) {
   .keynote-image {
-    height: 160px;
+    height: 190px;
   }
 }
+
 
 
 /* Content */
