@@ -27,3 +27,243 @@
 }
 
 
+
+/* =====================================
+   ICSCAI 2026 - KEYNOTE SPEAKERS
+===================================== */
+
+.keynote-section {
+  width: 100%;
+  padding: 55px 20px;
+  background: #f8f6f5;
+  box-sizing: border-box;
+}
+
+.keynote-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.keynote-heading {
+  margin-bottom: 30px;
+}
+
+.keynote-heading span {
+  color: #a00016;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.keynote-heading h2 {
+  color: #172f59;
+  font-size: 28px;
+  font-weight: 750;
+  margin: 8px 0;
+}
+
+.keynote-heading p {
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grid */
+
+.keynote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+
+.keynote-card {
+  background: #fff;
+  border: 1px solid #e8e9ed;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 0;
+  box-shadow: 0 3px 12px rgba(23, 47, 89, 0.04);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.keynote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(23, 47, 89, 0.09);
+}
+
+/* Image */
+
+.keynote-image {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background: #edf0f5;
+}
+
+.keynote-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* Content */
+
+.keynote-info {
+  padding: 22px;
+}
+
+.keynote-label {
+  display: inline-block;
+  background: #fcebed;
+  color: #a00016;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.keynote-info h3 {
+  color: #172f59;
+  font-size: 22px;
+  font-weight: 750;
+  line-height: 1.3;
+  margin: 13px 0 5px;
+}
+
+.keynote-designation {
+  color: #536176;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.keynote-line {
+  width: 38px;
+  height: 3px;
+  border-radius: 5px;
+  background: #a00016;
+  margin: 15px 0;
+}
+
+.keynote-topic,
+.keynote-role {
+  color: #596579;
+  font-size: 13px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.keynote-topic {
+  color: #344967;
+  font-weight: 600;
+}
+
+.keynote-university {
+  color: #172f59;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 12px 0 0;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .keynote-section {
+    padding: 40px 16px;
+  }
+
+  .keynote-grid {
+    gap: 14px;
+  }
+
+  .keynote-image {
+    height: 210px;
+  }
+
+  .keynote-info {
+    padding: 15px;
+  }
+
+  .keynote-info h3 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+  .keynote-section {
+    padding: 32px 14px;
+  }
+
+  .keynote-heading {
+    margin-bottom: 22px;
+  }
+
+  .keynote-heading h2 {
+    font-size: 23px;
+  }
+
+  .keynote-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .keynote-card {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .keynote-image {
+    height: 230px;
+  }
+
+  .keynote-info {
+    padding: 18px;
+  }
+
+  .keynote-info h3 {
+    font-size: 20px;
+  }
+
+  .keynote-role,
+  .keynote-topic {
+    font-size: 13px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 360px) {
+  .keynote-image {
+    height: 195px;
+  }
+
+  .keynote-info {
+    padding: 15px;
+  }
+
+  .keynote-info h3 {
+    font-size: 18px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .keynote-card {
+    transition: none;
+  }
+}
+
