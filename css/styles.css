@@ -292,11 +292,11 @@
     padding: 38px 16px;
   }
 /* 3rd card  */
-  .keynote-card:nth-child(3) {
+  /* .keynote-card:nth-child(3) {
     grid-column:1/-1;
   width: calc((100% - 14px) / 2);
     justify-self: center;
-}
+} */
 
   .keynote-heading h2 {
     font-size: 25px;
@@ -340,11 +340,12 @@
   }
 
   /*3rd card   */
+  /*
   .keynote-card:nth-child(3) {
   grid-column:auto;
     width:100%;
     justify-self: center;
-}
+} */
 
   .keynote-heading {
     margin-bottom: 22px;
