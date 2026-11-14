@@ -506,3 +506,15 @@ section[id] {
     justify-self: stretch !important;
   }
 } */
+
+
+/* Mobile Touch Interaction */
+button,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* Prevent decorative elements from blocking clicks */
