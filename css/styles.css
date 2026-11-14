@@ -1,11 +1,40 @@
 /* Extracted custom styles from the original Stitch export */
 @layer base {
+
+/*change1  */
   html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+  
+  /* html,
   body {
     width: 100vw;
     margin: 0;
     padding: 0;
-  }
+  } */
   body {
     overscroll-behavior: none;
   }
