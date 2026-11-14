@@ -458,3 +458,52 @@
     justify-self: center;
   }
 }
+
+
+
+/* =================================
+   MOBILE BUTTON OPTIMIZATION
+================================= */
+
+button,
+a,
+.bottom-nav-item,
+.drawer-nav-item {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+/* Smooth button interaction */
+button,
+.bottom-nav-item,
+.drawer-nav-item {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Mobile touch feedback */
+@media (hover: none) and (pointer: coarse) {
+
+    button:active,
+    a:active {
+        transform: scale(0.97);
+    }
+
+    button:hover,
+    a:hover {
+        filter: none;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    button,
+    a,
+    .bottom-nav-item,
+    .drawer-nav-item {
+        transition: none !important;
+    }
+}
