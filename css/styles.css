@@ -443,22 +443,21 @@
 
 
 
-/* ==========================================
-   DESKTOP MODE ON MOBILE + TABLET FIX
-========================================== */
-/*
-@media screen and (max-width: 1024px) {
+/* FORCE ONE CARD ON PHYSICAL MOBILE DEVICES */
+
+@media (max-device-width: 600px),
+       (pointer: coarse) and (hover: none) {
 
   .keynote-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 
+  .keynote-card,
   .keynote-card:nth-child(3) {
-    grid-column: 1 / -1;
-    width: calc((100% - 18px) / 2);
-    justify-self: center;
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
   }
 }
-
-*/
