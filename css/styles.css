@@ -278,8 +278,8 @@
     grid-column:1/-1 !important;
     width:100% !important;
     /* max-width: 100% !important; */
-    justify-self: stretch !important;
-  } */
+    /* justify-self: stretch !important; */
+  /* } */ 
 
   .keynote-image {
     aspect-ratio: 1.25 / 1;
