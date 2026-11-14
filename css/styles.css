@@ -261,9 +261,10 @@
   }
 
   /* 3rd card */
+  /*
   .keynote-card:nth-child(3) {
   width: calc((100% - 18px) / 2);
-}
+} */
 
   .keynote-grid {
     gap: 18px;
