@@ -116,6 +116,13 @@
               box-shadow 0.25s ease;
 }
 
+/* Centre the 3rd Speaker Card - Dr. Rishi */
+.keynote-card:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 22px) / 2);
+}
+
 .keynote-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(23, 47, 89, 0.09);
@@ -253,6 +260,11 @@
     padding: 42px 20px;
   }
 
+  /* 3rd card */
+  .keynote-card:nth-child(3) {
+  width: calc((100% - 18px) / 2);
+}
+
   .keynote-grid {
     gap: 18px;
   }
@@ -279,6 +291,10 @@
   .keynote-section {
     padding: 38px 16px;
   }
+/* 3rd card  */
+  .keynote-card:nth-child(3) {
+  width: calc((100% - 14px) / 2);
+}
 
   .keynote-heading h2 {
     font-size: 25px;
@@ -320,6 +336,12 @@
   .keynote-section {
     padding: 32px 14px;
   }
+
+  /*3rd card   */
+  .keynote-card:nth-child(3) {
+  grid-column:auto;
+    width:100%;
+}
 
   .keynote-heading {
     margin-bottom: 22px;
