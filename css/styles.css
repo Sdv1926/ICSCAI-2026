@@ -267,7 +267,15 @@
 } */
 
   .keynote-grid {
-    gap: 18px;
+    /* gap: 18px; */
+    grid-template-columns: 1fr !important;
+  }
+
+  .keynote-grid > .keynote-card:nth-child(3){
+    grid-column:1/-1 !important;
+    width:100% !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
   }
 
   .keynote-image {
