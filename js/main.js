@@ -311,8 +311,115 @@ document.addEventListener("DOMContentLoaded", function () {
        6. INITIALIZE DRAWER STATE
     ====================================== */
 
-    closeDrawer();
+    // closeDrawer();
 
-    console.log("ICSCAI 2026: JavaScript initialized successfully.");
+    // console.log("ICSCAI 2026: JavaScript initialized successfully.");
+
+   
+/* ======================================
+   6. REGISTRATION MODAL ACCESSIBILITY
+====================================== */
+
+const registrationModal = document.getElementById("registration-modal");
+const registrationPanel = document.getElementById("registration-modal-panel");
+const modalCloseBtn = document.getElementById("modal-close-btn");
+const successDoneBtn = document.getElementById("success-done-btn");
+
+let lastFocusedElement = null;
+
+function openRegistrationModal() {
+    if (!registrationModal) return;
+
+    lastFocusedElement = document.activeElement;
+
+    // Enable modal interaction first
+    registrationModal.inert = false;
+    registrationModal.setAttribute("aria-hidden", "false");
+
+    registrationModal.classList.remove(
+        "opacity-0",
+        "pointer-events-none"
+    );
+
+    if (registrationPanel) {
+        registrationPanel.classList.remove("scale-95");
+    }
+
+    document.body.style.overflow = "hidden";
+
+    // Move keyboard focus inside the opened modal
+    const firstInput = registrationModal.querySelector(
+        "input:not([type='radio']), select, button"
+    );
+
+    if (firstInput) {
+        firstInput.focus();
+    }
+}
+
+function closeRegistrationModal() {
+    if (!registrationModal) return;
+
+    // Move focus outside BEFORE hiding the modal
+    if (registrationModal.contains(document.activeElement)) {
+        if (lastFocusedElement && lastFocusedElement.isConnected) {
+            lastFocusedElement.focus();
+        } else {
+            document.activeElement.blur();
+        }
+    }
+
+    // Prevent further focus inside the modal
+    registrationModal.inert = true;
+    registrationModal.setAttribute("aria-hidden", "true");
+
+    registrationModal.classList.add(
+        "opacity-0",
+        "pointer-events-none"
+    );
+
+    if (registrationPanel) {
+        registrationPanel.classList.add("scale-95");
+    }
+
+    document.body.style.overflow = "";
+}
+
+// Open modal from registration buttons
+document.querySelectorAll(
+    "#header-register-btn, [data-open-registration-modal]"
+).forEach(button => {
+    button.addEventListener("click", openRegistrationModal);
+});
+
+// Close buttons
+if (modalCloseBtn) {
+    modalCloseBtn.addEventListener("click", closeRegistrationModal);
+}
+
+if (successDoneBtn) {
+    successDoneBtn.addEventListener("click", closeRegistrationModal);
+}
+
+// Close when clicking outside the modal panel
+if (registrationModal) {
+    registrationModal.addEventListener("click", function(event) {
+        if (event.target === registrationModal) {
+            closeRegistrationModal();
+        }
+    });
+}
+
+// Close with Escape key
+document.addEventListener("keydown", function(event) {
+    if (
+        event.key === "Escape" &&
+        registrationModal &&
+        !registrationModal.inert
+    ) {
+        closeRegistrationModal();
+    }
+});
+
 
 });
